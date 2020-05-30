@@ -1,0 +1,34 @@
+<header>
+    <!--pc用ナビゲーション-->
+    <div id="header-pc">
+        <div id="title-box">
+            <h1 id="title">龍ケ崎コロナ応援サイト（仮）</h1>
+        </div>
+        <nav class="pc-nav">
+            <ul>
+                <li class="pc-nav__menu"><%= link_to "HOME", root_path %></li>
+                <li class="pc-nav__menu header-bar"><%= link_to "お店を探す", search_path %></li>
+                <li class="pc-nav__menu"><a href="https://news.yahoo.co.jp/search/?p=%23%E9%BE%8D%E3%82%B1%E5%B4%8E%E5%B8%82&ei=UTF-8">NEWS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--スマホ用ナビゲーション-->
+
+        <nav class="mobile-nav">
+          　<ul>
+            　 <li><%= link_to "HOME", root_path %></li>
+               <li><a href="#">お店を探す</a></li>
+               <li><a href="#">NEWS</a></li>
+               <li class="close"><span>閉じる</span></li>
+            </ul>
+         </nav>
+
+    
+    <!--ハンバーガー-->
+    <div id="hamburger">
+        <span></span>
+    </div>
+    
+    
+
+</header>

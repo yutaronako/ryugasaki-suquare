@@ -1,0 +1,95 @@
+
+<div class="top" id="top">
+   <%= image_tag "tatsunoko-yama.jpg", id:"top-img" %>
+   <p>がんばっぺ龍ケ崎</p>
+</div>
+
+
+<div class="middle">
+<div class="container">
+    <div class="row">
+        
+        <!--新着ニュースなど-->
+        <div class="col-12 info">
+            <div class="info__1">
+                <a href="https://www.city.ryugasaki.ibaraki.jp/anzen/cov-2020/index.html"><p class="info__1__ryugasaki-colonaviurus">龍ヶ崎市コロナニュース</p></a>
+            </div>
+            <div class="info__1">
+                <a href="https://www.pref.ibaraki.jp/1saigai/2019-ncov/index.html"><p class="info__1__ibaraki-colonaviurus">茨城県コロナニュース</p></a>
+            </div>
+            <div class="info__1">
+                <a href="https://www.city.ryugasaki.ibaraki.jp/"><p class="info__1__ryugasaki-hp">龍ヶ崎市HP</p></a>
+            </div>
+        
+        </div>
+        
+        <div class="col-10">
+            <!--各店舗の情報を掲載-->
+            <main>
+                <div class="main">
+                    
+                    <!--NY Lab-->
+                    <div class="main__shopbox">
+                    <a href="/shops/nylab">
+                        <div class="main__shopbox__fig">
+                            <%= image_tag "nakoshop.jpg", class:"main__shopbox__img" %>
+                        </div>
+                        <div class="main__shopbox__namebox">
+                            <p class="main__shopbox__category">
+                                <a href="">Web作成</a>
+                            </p>
+                            <p class="main__shopbox__shopname">
+                                <%= link_to "NY Lab", shops_nylab_path %>
+                            </p>
+                        </div>
+                    </a>
+                    </div>
+                    
+                    <div class="main__shopbox">
+                        <div class="main__shopbox__fig">
+                            <%= image_tag "nakoshop.jpg", class:"main__shopbox__img" %>
+                        </div>
+                        <div class="main__shopbox__namebox">
+                            <p class="main__shopbox__category">
+                                <a href="">Web作成</a>
+                            </p>
+                            <p class="main__shopbox__shopname">
+                                <%= link_to "YN Lab", shops_nylab_path %>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <!--募集-->
+                    <div class="main__shopbox">
+                    <a href="/contact">
+                        <div class="main__shopbox__recruitmentbox">
+                            <p class="main__shopbox__recruit-title">掲載店募集</p>
+                            <p class="main__shopbox__recruit-centence">新型コロナウイルスに負けず頑張っていきましょう。</p>
+                        </div>
+                        <div class="main__shopbox__recruitmentbox">
+                            <p class="main__shopbox__recruit-subtitle">掲載を希望される方はご連絡ください</p>
+                        </div>
+                    </a>
+                    </div>
+                    
+                    
+            </main>
+        </div>    
+        
+        <!--サイドバー-->
+        <div class="col-2">
+            <div class="sidebar">
+                <div class="sidebar__titlebox">
+                    <p class="sidebar__title">新着ニュース</p>
+                </div>
+                <div class="sidebar__contentbox">
+                    <p class="sidebar__content__title">5/29</p>
+                    <p class="sidebar__content">サイト設立</p>
+                </div>
+            </div>
+        </div>    
+</div>
+</div>
+</div>

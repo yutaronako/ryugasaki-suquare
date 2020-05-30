@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+         <div class="col-12 breadcrumb">
+            <div class="">
+                <ul>
+                    <li class=""><%= link_to "HOME", root_path %><span>></span></li>
+                    <li class="">お店を探す</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="search">
+                <div class="search__select">
+                    <div class="search__select__box" id="select-category">
+                        <p>業種から探す</p>
+                    </div>
+                    <div class="search__select__box" id="select-name">
+                        <p>名前から探す</p>
+                    </div>
+                </div>
+                
+                
+                <!--業種から探す-->
+                <div class="search__result" id="result-category">
+                    
+                    <!--Web作成カテゴリー-->
+                    <div class="search__result__categorybox">
+                        <p class="search__result__title">Web作成</p>
+                    </div>
+                    
+                    <div class="main__shopbox">
+                        <div class="main__shopbox__fig">
+                            <a href="assets/nakoshop.jpg" data-lightbox="roadtrip">
+                                <%= image_tag "nakoshop.jpg", class:"main__shopbox__img" %>
+                            </a>
+                        </div>
+                        <div class="main__shopbox__namebox">
+                            <p class="main__shopbox__category">
+                                <a href="">Web作成</a>
+                            </p>
+                            <p class="main__shopbox__shopname">
+                                <%= link_to "NY Lab", shops_nylab_path %>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                <!--名前から探す-->
+                <div class="search__result" id="result-name">
+                    <!--検索フォームー-->
+                    
+                     <div class="main__shopbox">
+                        <div class="main__shopbox__fig">
+                            <a href="assets/nakoshop.jpg" data-lightbox="roadtrip">
+                                <%= image_tag "nakoshop.jpg", class:"main__shopbox__img" %>
+                            </a>
+                        </div>
+                        <div class="main__shopbox__namebox">
+                            <p class="main__shopbox__category">
+                                <a href="">Web作成</a>
+                            </p>
+                            <p class="main__shopbox__shopname">
+                                <%= link_to "NY Lab", shops_nylab_path %>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<script>
+    $(function(){
+         
+        $('#result-name').css('display', 'none');
+        $('#select-name').css('background', '#c4dff6');
+      
+        $('#select-category').on('click', function(){
+          
+           $('#result-category').css('display', '');
+           $('#result-name').css('display', "none");
+           $('#select-category').css('background', '#0085ad');
+           $('#select-name').css('background', '#c4dff6');
+        });
+      
+        $('#select-name').on('click', function(){
+          
+           $('#result-category').css('display', 'none');
+           $('#result-name').css('display', '');
+           $('#select-category').css('background', '#c4dff6');
+           $('#select-name').css('background', '#0085ad');
+        });
+        
+    });
+    
+</script>

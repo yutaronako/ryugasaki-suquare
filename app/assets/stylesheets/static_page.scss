@@ -1,0 +1,463 @@
+@import "bootstrap";
+
+
+.wrap{
+    overflow: hidden;
+}
+
+
+
+// header
+header{
+    z-index: 2;
+}
+#title-box{
+    margin: 3.5rem auto 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+#title{
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+#header-pc{
+    text-align: center;   
+}
+.pc-nav{
+    background: #004b64;
+    width: 100%;
+    z-index: 2;
+}
+.pc-nav ul{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.pc-nav li{
+    font-size: 2.5rem;
+    font-weight: bold;
+    list-style: none;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+}
+.header-bar{
+    border-left: solid 0.2rem #fff;
+    border-right: solid 0.2rem #fff;
+}
+.pc-nav li a{
+    color: #fff;    
+}
+
+
+.mobile-nav{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 640px) {
+    .pc-nav{
+        display: none;
+    }
+
+   
+    // スマホ用表示設定
+    #hamburger{
+        position: relative;
+        display: block;
+        width: 30%;
+        height: 2.5rem;
+        marigin: 0 0 0 auto;
+    }
+    #hamburger::before {
+       content: '';
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       background-color: #fff;
+    }
+    #hamburger::after {
+       content: '';
+       display: block;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       background-color: #fff;
+    }
+    .mobile-nav {
+       z-index: 1;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100vh;
+       display: block;
+       width: 100%;
+       background: rgba(0, 0, 0, .8);
+       transition: all .2s ease-in-out;
+       opacity: 0;
+       transform: translateY(-100%);
+    }
+    .mobile-nav ul {
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 100%;
+    }
+    .mobile-nav li {
+       margin: 0;
+       padding: 0;
+    }
+    .mobile-nav li span {
+       font-size: 1.5rem;
+       color: #fff;
+    }
+    .mobile-nav li a, .mobile-nav li span {
+       display: block;
+       padding: 2rem 0;
+    }
+    .toggle {
+       transform: translateY( 0 );
+       opacity: 1;
+    }
+        // 閉じる表示作成
+        /*基準となるli要素*/
+        .mobile-nav .close {
+           position: relative;
+           padding-left: 20px;
+        }
+        /*バツ印線1*/
+        .mobile-nav .close::before {
+           content: '';
+           position: absolute;
+           top: 50%;
+           left: 0;
+           display: block;
+           width: 16px;
+           height: 1px;
+           background: #fff;
+           transform: rotate( 45deg );
+        }
+        /*バツ印線2*/
+        .mobile-nav .close::after {
+           content: '';
+           position: absolute;
+           top: 50%;
+           left: 0;
+           display: block;
+           width: 16px;
+           height: 1px;
+           background: #fff;
+           transform: rotate( -45deg );
+        }
+        
+        
+        #hamburger span{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: 100%;
+            height: 0.2rem;
+            background: #fff;
+            transform: translateY(-50%);
+        }
+}
+
+
+
+// フッター
+.footer{
+    width: 90%;
+    margin: 2rem auto;
+    border-top: solid 0.2rem #adadad;
+}
+.footer ul{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer li{
+    font-size: 2rem;
+    font-weight: bold;
+    list-style: none;
+    padding: 1rem auto;
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.footer li a{
+    color: #adadad;
+}
+.copyright{
+    margin: 1rem;
+    margin: auto;
+}
+.copyright p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+//フッター　サイト開設の経緯
+.about{
+    width: 80%;
+    margin: 3rem auto;
+}
+.contact{
+    width: 80%;
+    margin: 3rem auto;
+}
+.privacy{
+    width: 80%;
+    margin: 3rem auto;
+}
+.footer-title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0rem;
+}
+.footer__box h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 2rem auto;
+}
+.footer__box p{
+    font-size: 2rem;
+    line-height: 1.5em;
+}
+.footer__box li{
+    font-size: 1.8rem;
+    
+}
+
+
+//home.html.erb
+// メインコンテンツ
+
+.top{
+    width: 100%;
+    position: relative;
+ 
+}
+.top p{
+    position: absolute;
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: 0.2rem 0.4rem 0.3rem rgba(0,0,0,0.3);
+    font-family :"Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    font-weight: bold;
+    top: 30%;
+    left: 20%;
+    // -webkit-text-stroke: 0.3rem #fd5c63;
+}
+
+#top-img{
+    position: relative;
+    filter: blur(1.5rem);
+    width: 110%;
+    height: 105%;
+    z-index: -1;
+    top: -1rem;
+    left: -5%;
+}
+
+
+
+
+// メインコンテンツ
+.middle{
+    background: #fff;
+    width: 100%;
+    margin-top: -2rem;
+}
+.info{
+    border-bottom: solid 0.2rem #adadad;
+    display: flex;
+}
+.info__1{
+    width: 100%;
+}
+    // コロナウイルス
+    .info p{
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        margin: 5rem 2rem 3rem;
+        padding: 1rem;
+    }
+    
+    
+    .info__1__ryugasaki-colonaviurus{
+        background: #ea4335;
+    }
+    .info__1__ryugasaki-colonaviurus:hover{
+        opacity: 0.7;
+    }
+    .info__1__ibaraki-colonaviurus{
+        background: #3B4C8E;
+    }
+    .info__1__ibaraki-colonaviurus:hover{
+        opacity: 0.7;
+    }
+    .info__1__ryugasaki-hp{
+        background: #7d3f98;
+    }
+    .info__1__ryugasaki-hp:hover{
+        opacity: 0.7;
+    }
+    
+    .info a{
+        color :#fff;
+    }
+    
+
+// 各店舗の情報を記載
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main__shopbox{
+    width: 30%;
+    margin: 2rem 1% 2rem 1%;
+    border: solid 0.15rem #adadad;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem gray; 
+    transition: 0.5s;
+}
+.main__shopbox:hover{
+    border: solid 0.15rem #004b64;
+}
+.main__shopbox a{
+    text-decoration: none;   
+}
+.main__shopbox__img{
+    width: 100%;
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
+}
+.main__shopbox__category{
+    font-size: 1.5rem;
+    text-align:center;
+    font-weight: bold;
+    margin: 0.5rem;
+    border-bottom: solid 0.1rem #adadad;
+}
+.main__shopbox__category a{
+    color: #ea4335;
+    text-decoration: none;
+}
+.main__shopbox__shopname{
+    font-size: 3rem;
+    text-align:center;
+    margin: 0.7rem;
+    font-weight: bold;
+}
+.main__shopbox__shopname a{
+    color: #146eb4;
+    text-decoration: none;
+}
+.main__shopbox__recruitmentbox{
+    width: 100%;
+}
+.main__shopbox__recruit-title{
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 2rem auto;
+    text-align: center;
+    color: #ed1c24;
+}
+.main__shopbox__recruit-centence{
+    font-size: 2rem;
+    margin: 2.5rem auto;
+    text-align: center;
+    color: #222;
+}
+.main__shopbox__recruit-subtitle{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2.5rem auto;
+    text-align: center;
+    color: #146eb4;
+}
+
+
+
+// サイドバー
+.sidebar{
+    width: 100%;
+    height: 20rem;
+    margin: 2rem auto;
+    border: solid 0.2rem #adadad;
+}
+.sidebar__title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 1rem;
+    color: #ea4335;
+}
+.sidebar__contentbox{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.sidebar__content__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 20%;
+}
+.sidebar__content{
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+
+
+
+
+
+
+// search　検索画面
+.search__select{
+    display: flex;
+}
+
+
+.search__select__box{
+    width: 20%;
+    margin: 1.5rem 0rem 0rem;
+    background-color: #0085ad;
+}
+.search__select__box p{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    margin: 1rem;
+    text-align: center;
+}
+.search__result{
+    border: solid 0.1rem #adadad;
+    margin: 0rem 0rem 2rem;
+    padding: 1rem;
+}
+.search__result__categorybox{
+    margin: 1rem;
+}
+.search__result__title{
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: solid 0.1rem #adadad;
+    padding: 0.2rem;
+}
