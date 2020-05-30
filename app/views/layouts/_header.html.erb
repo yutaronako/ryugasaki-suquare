@@ -2,9 +2,10 @@
     <!--pc用ナビゲーション-->
     <div id="header-pc">
         <div id="title-box">
-            <h1 id="title">龍ケ崎コロナ応援サイト（仮）</h1>
+            <h1 id="title"><%= link_to "タツノコスクエア", root_path %></h1>
+            <h2 id="sub-title">~龍ケ崎から日本を応援するメディア~</h1>
         </div>
-        <nav class="pc-nav">
+        <nav class="pc-nav" id="pc-nav">
             <ul>
                 <li class="pc-nav__menu"><%= link_to "HOME", root_path %></li>
                 <li class="pc-nav__menu header-bar"><%= link_to "お店を探す", search_path %></li>
@@ -13,20 +14,28 @@
         </nav>
     </div>
     <!--スマホ用ナビゲーション-->
-
+    <div id="header-mobile">
+        <div class="">
+        <h1 id="mobile-title"><%= link_to "タツノコスクエア", root_path %></h1>
+        <h2 id="mobile-sub-title">~Cheer up Japan from Ryugaski~</h2>
+        </div>
         <nav class="mobile-nav">
           　<ul>
             　 <li><%= link_to "HOME", root_path %></li>
-               <li><a href="#">お店を探す</a></li>
-               <li><a href="#">NEWS</a></li>
+               <li><%= link_to "お店を探す", search_path %></li>
+               <li><a href="https://news.yahoo.co.jp/search/?p=%23%E9%BE%8D%E3%82%B1%E5%B4%8E%E5%B8%82&ei=UTF-8">NEWS</a></li>
                <li class="close"><span>閉じる</span></li>
             </ul>
-         </nav>
-
+        </nav>
+        
     
-    <!--ハンバーガー-->
-    <div id="hamburger">
-        <span></span>
+        <!--ハンバーガー-->
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>メニュー</p>
+        </div>
     </div>
     
     
