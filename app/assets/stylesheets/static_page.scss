@@ -10,7 +10,41 @@
     html{
         font-size: 62.5%;
     }
-        
+    
+    // topへ行くボタン
+    #page_top{
+      width: 6rem;
+      height: 6rem;
+      position: fixed;
+      right: 5rem;
+      bottom: 3rem;
+      background: #3f98ef;
+      opacity: 0.8;
+      border-radius: 50%;
+    }
+    #page_top a{
+      position: relative;
+      display: block;
+      width: 5rem;
+      height: 5rem;
+      text-decoration: none;
+    }
+    #page_top a::before{
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f102';
+      font-size: 3rem;
+      color: #fff;
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      top: -1rem;
+      bottom: 0;
+      right: -1rem;
+      left: 0;
+      margin: auto;
+      text-align: center;
+    }    
         
     
     .wrap{
@@ -306,7 +340,7 @@
         margin: 2rem auto;
     }
     .sidebar__title{
-        font-size: 3rem;
+        font-size: 1.6rem;
         font-weight: bold;
         margin: 1rem;
         color: #ea4335;
@@ -314,19 +348,22 @@
     .sidebar__contentbox{
         display: flex;
         width: 100%;
+        margin: 0.5rem;
         justify-content: space-evenly;
     }
     .sidebar__content__title{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: bold;
         width: 20%;
     }
     .sidebar__contentbox__wrap{
         border: solid 0.2rem #adadad;
+        height: 20rem;
     }
     .sidebar__content{
         font-size: 1.5rem;
-        width: 60%;
+        width: 80%;
+        margin-left: 1rem;
     }
     
     
