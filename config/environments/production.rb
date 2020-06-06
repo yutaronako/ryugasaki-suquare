@@ -112,4 +112,5 @@ Rails.application.configure do
 
   # herokuデブロイ
   config.hosts << "ryugasaki-suquare.herokuapp.com"
+  config.hosts << "www.ryugasaki-square.com"
 end
