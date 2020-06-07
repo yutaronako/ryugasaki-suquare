@@ -38,7 +38,6 @@
         display: flex;
         flex-wrap: wrap;
     }
-    
     .shop-info{
         width: 100%;
         display: flex;
@@ -46,15 +45,43 @@
         justify-content: space-around;
         margin: 2rem 0rem;
     }
+    .shop__titlebox{
+        width: 100%;
+        padding-bottom: 0.5rem;
+        border-bottom: solid 0.1rem #adadad;
+        margin-bottom: 2rem;
+    }
     .shop__name{
         width: 100%;
         font-size: 5rem;
         font-weight: bold;
         margin: 2rem 0rem;
-        padding-bottom: 2rem;
         text-align: center;
-        border-bottom: solid 0.1rem #adadad;
+        font-family: 'Noto Serif JP', sans-serif, "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
     }
+    .shop__name a{
+        color: #495057;
+        text-decoration: none;
+    }
+    .shop__category{
+        margin: 2rem auto;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    // トップスライド
+    .swiper-container{
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+    .swiper-slide{
+        text-align: center;
+    }
+    .swiper-img{
+        width: 80%;
+    }
+    
+    // 店舗詳細情報
     .shop__imagebox{
         width: 50%;
         margin: 0rem;
@@ -67,8 +94,17 @@
     }
     .shop__explain{
         width: 50%;
-        marig: 0rem;
+        margin: 0rem;
         padding: 0rem 1rem 0rem;
+    }
+    .shop__explain-full{
+        width: 100%;
+        margin: 0rem;
+        padding: 0rem 1rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
     }
     .shop__explain__title{
         width: 100%;
@@ -93,6 +129,43 @@
     }
     em{
         font-weight: bold;
+    }
+    .shop__message-box{
+        width: 100%;
+        margin: 0rem;
+    }
+    .shop__message{
+        text-align: left;
+        margin: 1rem;
+        paddin-left: 1rem;
+        font-size: 1.8rem;
+    }
+    .shop__message em{
+        font-weigh: bold;
+        color: #ff0000;
+    }
+    
+    // クーポン
+    .shop__explain__coupon{
+        width: 30%;
+        margin: 1rem;
+        padding: 1rem 0.5rem;
+        height: 100%;
+        background: #d0ebff;
+        border-radius: 1rem;
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+    }
+    .shop__explain__coupon__title{
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.6rem;
+        padding-bottom: 1rem;
+    }
+    .shop__explain__coupon__content{
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.2em;
     }
     
     .shop-info__information{
@@ -165,23 +238,44 @@
         justify-content: space-around;
         margin: 2rem 0rem;
     }
+    .shop__titlebox{
+        width: 100%;
+        border-bottom: solid 0.1rem #adadad;
+        margin-bottom: 2rem;
+    }
     .shop__name{
         width: 100%;
         font-size: 5rem;
         font-weight: bold;
         margin: 2rem 0rem;
-        padding-bottom: 2rem;
         text-align: center;
-        border-bottom: solid 0.1rem #adadad;
-        font-family: 'Noto Serif JP', sans-serif, "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;;
+        font-family: 'Noto Serif JP', sans-serif, "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ���朝", "MS PMincho", serif;
     }
     .shop__name a{
         color: #495057;
         text-decoration: none;
     }
+    .shop__category{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    // スライダー画像設定
+    .swiper-container{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .swiper-slide{
+        text-align: center;
+    }
+    .swiper-img{
+        width: 80%;
+    }
+    
+    
     .shop__imagebox{
         width: 50%;
-        margin: 0rem;
+        margin: 3rem 0rem 0rem 0rem;
         padding: 0rem 1rem 0rem;
     }
     .shop__image{
@@ -193,6 +287,14 @@
         width: 50%;
         marig: 0rem;
         padding: 0rem 1rem 0rem;
+    }
+     .shop__explain-full{
+        width: 100%;
+        margin: 0rem;
+        padding: 0rem 1rem 0rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .shop__explain__title{
         width: 100%;
@@ -217,6 +319,38 @@
     }
     em{
         font-weight: bold;
+    }
+    .shop__message{
+        text-align: left;
+        margin: 1rem;
+        paddin-left: 1rem;
+        font-size: 1.8rem;
+    }
+    .shop__message em{
+        font-weigh: bold;
+        color: #ff0000;
+    }
+    
+    // クーポン
+    .shop__explain__coupon{
+        width: 45%;
+        margin: 1rem;
+        padding: 1rem 1rem;
+        background: #d0ebff;
+        border-radius: 1rem;
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+    }
+    .shop__explain__coupon__title{
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+    .shop__explain__coupon__content{
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.3em;
     }
     
     .shop-info__information{
